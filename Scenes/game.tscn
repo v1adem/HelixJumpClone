@@ -46,6 +46,4 @@ shape = SubResource("ConcavePolygonShape3D_ej7hg")
 
 [node name="Player" parent="." instance=ExtResource("1_i7lve")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.918724, 0.555312)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 1.72514, 1.95559)
+top_level = true
