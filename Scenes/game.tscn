@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://o6ei44fm53dl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_py8jp"]
+sky_material = SubResource("ProceduralSkyMaterial_orbx2")
+
+[sub_resource type="Environment" id="Environment_12bx2"]
+background_mode = 2
+sky = SubResource("Sky_py8jp")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_f78nj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qsouv"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4xpmi"]
+
+[node name="Game" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_12bx2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.983067, 0.158698, -0.0916241, 2.78059e-08, 0.5, 0.866026, 0.183248, -0.851361, 0.491533, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.683437, 0, 0, 0, 6.31931, 0, 0, 0, 0.683437, 0, -1.98211, 0)
+mesh = SubResource("CylinderMesh_f78nj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.55, 0, 0, 0, 0.06, 0, 0, 0, 1.55, 0, -1.23773, 0)
+mesh = SubResource("CylinderMesh_qsouv")
+
+[node name="Ball" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, -0.783939, 0.537027)
+mesh = SubResource("SphereMesh_4xpmi")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0, 1.95559)

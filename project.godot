@@ -10,9 +10,16 @@ config_version=5
 
 [application]
 
-config/name="HelixJumpClone"
+config/name="Helix Jump Clone"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=576
+window/size/viewport_height=1024
+window/stretch/aspect="keep_width"
+window/handheld/orientation=1
 
 [rendering]
 
