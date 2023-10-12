@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b514u3hbs4gxr"
-path="res://.godot/imported/platformonepart.glb-7d8e0d2828d75ec8b39db02f95d397cb.scn"
+uid="uid://bb77s4y2g71sg"
+path="res://.godot/imported/platform2.glb-3a2fe1ff56c603d11ac79d263276291a.scn"
 
 [deps]
 
-source_file="res://Scenes/platformonepart.glb"
-dest_files=["res://.godot/imported/platformonepart.glb-7d8e0d2828d75ec8b39db02f95d397cb.scn"]
+source_file="res://Scenes/Platforms/platform2.glb"
+dest_files=["res://.godot/imported/platform2.glb-3a2fe1ff56c603d11ac79d263276291a.scn"]
 
 [params]
 
@@ -28,5 +28,12 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Коло004": {
+"generate/physics": true,
+"physics/shape_type": 2
+}
+}
+}
 gltf/embedded_image_handling=1

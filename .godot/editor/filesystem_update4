@@ -1,5 +1,7 @@
-res://Scripts/player.gd
+res://Scenes/Levels/test_lvl.tscn
 res://Scenes/game.tscn
 res://Scenes/player.tscn
-res://Scenes/character_body_3d.tscn
-res://Scripts/character_body_3d.gd
+res://Scenes/Button.gd
+res://Scenes/main.gd
+res://Scenes/Levels/test_lvl.gd
+res://Scenes/main.tscn

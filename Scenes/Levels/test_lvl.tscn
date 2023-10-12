@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqjtqygny4g6c"]
+
+[ext_resource type="PackedScene" uid="uid://3wodk6aw2bty" path="res://Scenes/Platforms/platform.glb" id="1_2edwe"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5xp8o"]
+
+[node name="test_lvl" type="Node3D"]
+
+[node name="pillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 100, 0, 0, 0, 0.7, 0, 0, 0)
+mesh = SubResource("CylinderMesh_5xp8o")
+
+[node name="platform" parent="." instance=ExtResource("1_2edwe")]
