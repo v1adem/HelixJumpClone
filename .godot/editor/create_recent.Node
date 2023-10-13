@@ -1,6 +1,7 @@
 Button
 VBoxContainer
 MarginContainer
+Node2D
 MeshInstance3D
 CharacterBody3D
 Camera3D

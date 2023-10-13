@@ -1,4 +1,4 @@
-res://Scenes/game.tscn
-res://Scenes/game.gd
 res://Scenes/player.tscn
+res://Scenes/game.tscn
 res://Scenes/Levels/test_lvl.tscn
+res://Scenes/start.tscn

@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://8brugkakx11m"]
+
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_hjnlf"]
+[ext_resource type="PackedScene" uid="uid://kl3ul8aci75j" path="res://Scenes/player.tscn" id="2_vwtby"]
+[ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="3_h6c2k"]
+[ext_resource type="Script" path="res://Scripts/test_lvl.gd" id="4_rh5rc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_py8jp"]
+sky_material = SubResource("ProceduralSkyMaterial_orbx2")
+
+[sub_resource type="Environment" id="Environment_12bx2"]
+background_mode = 2
+sky = SubResource("Sky_py8jp")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_hjnlf")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_12bx2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.983067, 0.158697, -0.091624, 2.78059e-08, 0.5, 0.866026, 0.183248, -0.851361, 0.491533, 0, 1.72514, 0)
+shadow_enabled = true
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_vwtby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15918, 0.658986)
+
+[node name="test_lvl" parent="." instance=ExtResource("3_h6c2k")]
+transform = Transform3D(0.345675, 0, -0.938354, 0, 1, 0, 0.938354, 0, 0.345675, 0, 0, 0)
+script = ExtResource("4_rh5rc")
+
+[node name="start" type="Node2D" parent="."]
+position = Vector2(-106, -269)
+
+[node name="MarginContainer" type="MarginContainer" parent="start"]
+offset_left = 79.0
+offset_top = 220.0
+offset_right = 149.0
+offset_bottom = 321.0
+scale = Vector2(13.5, 15.063)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="start/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="start/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Play"
+
+[node name="Options" type="Button" parent="start/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="start/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Quit"
