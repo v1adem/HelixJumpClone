@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://8brugkakx11m"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_hjnlf"]
-[ext_resource type="PackedScene" uid="uid://kl3ul8aci75j" path="res://Scenes/player.tscn" id="2_vwtby"]
 [ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="3_h6c2k"]
 [ext_resource type="Script" path="res://Scripts/test_lvl.gd" id="4_rh5rc"]
+[ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/ball.tscn" id="5_kncpy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -28,8 +28,8 @@ environment = SubResource("Environment_12bx2")
 transform = Transform3D(0.983067, 0.158697, -0.091624, 2.78059e-08, 0.5, 0.866026, 0.183248, -0.851361, 0.491533, 0, 1.72514, 0)
 shadow_enabled = true
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_vwtby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15918, 0.658986)
+[node name="ball" parent="." instance=ExtResource("5_kncpy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0713535, 0.63982, 0.83443)
 
 [node name="test_lvl" parent="." instance=ExtResource("3_h6c2k")]
 transform = Transform3D(0.345675, 0, -0.938354, 0, 1, 0, 0.938354, 0, 0.345675, 0, 0, 0)

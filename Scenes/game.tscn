@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://o6ei44fm53dl"]
 
-[ext_resource type="PackedScene" uid="uid://kl3ul8aci75j" path="res://Scenes/player.tscn" id="1_0s0xr"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_aaec2"]
 [ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="2_pi7nu"]
+[ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/ball.tscn" id="3_ddg10"]
 [ext_resource type="Script" path="res://Scripts/test_lvl.gd" id="3_vw816"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
@@ -28,8 +28,8 @@ environment = SubResource("Environment_12bx2")
 transform = Transform3D(0.983067, 0.158697, -0.091624, 2.78059e-08, 0.5, 0.866026, 0.183248, -0.851361, 0.491533, 0, 1.72514, 0)
 shadow_enabled = true
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_0s0xr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15918, 0.658986)
+[node name="ball" parent="." instance=ExtResource("3_ddg10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.247927, 0.663154)
 
 [node name="test_lvl" parent="." instance=ExtResource("2_pi7nu")]
 transform = Transform3D(0.345675, 0, -0.938354, 0, 1, 0, 0.938354, 0, 0.345675, 0, 0, 0)
