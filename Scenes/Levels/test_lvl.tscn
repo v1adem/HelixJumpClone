@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqjtqygny4g6c"]
+[gd_scene load_steps=7 format=3 uid="uid://bqjtqygny4g6c"]
 
 [ext_resource type="PackedScene" uid="uid://3wodk6aw2bty" path="res://Scenes/Platforms/platform.glb" id="1_2edwe"]
 [ext_resource type="PackedScene" uid="uid://bv8vycuctsvjt" path="res://Scenes/Platforms/platform3.glb" id="2_wjlwc"]
@@ -7,11 +7,14 @@
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_5xp8o"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7co6"]
+
 [node name="test_lvl" type="Node3D"]
 
 [node name="pillar" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 100.001, 0, 0, 0, 0.7, 0, -92.1965, 0)
 mesh = SubResource("CylinderMesh_5xp8o")
+surface_material_override/0 = SubResource("StandardMaterial3D_a7co6")
 
 [node name="platform" parent="." instance=ExtResource("1_2edwe")]
 

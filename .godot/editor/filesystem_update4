@@ -1,6 +1,6 @@
 res://Scenes/player.tscn
-res://Scripts/ball.gd
 res://Scenes/start.tscn
 res://Scenes/Levels/test_lvl.tscn
 res://Scenes/ball.tscn
 res://Scenes/game.tscn
+res://Scripts/test_lvl.gd
