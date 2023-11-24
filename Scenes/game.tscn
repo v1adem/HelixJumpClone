@@ -5,18 +5,19 @@
 [ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/ball.tscn" id="3_ddg10"]
 [ext_resource type="Script" path="res://Scripts/test_lvl.gd" id="3_vw816"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_twca4"]
 
 [sub_resource type="Sky" id="Sky_py8jp"]
-sky_material = SubResource("ProceduralSkyMaterial_orbx2")
+sky_material = SubResource("PhysicalSkyMaterial_twca4")
 
 [sub_resource type="Environment" id="Environment_12bx2"]
 background_mode = 2
+background_color = Color(0.137255, 0.184314, 0.129412, 1)
 sky = SubResource("Sky_py8jp")
 tonemap_mode = 2
 glow_enabled = true
+fog_enabled = true
+fog_light_energy = 0.33
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_aaec2")
