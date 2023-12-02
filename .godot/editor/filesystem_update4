@@ -1,5 +1,5 @@
-res://Scenes/game.tscn
+res://Scenes/Levels/test_lvl.tscn
 res://Scenes/player.tscn
 res://Scenes/start.tscn
-res://Scenes/Levels/test_lvl.tscn
 res://Scenes/ball.tscn
+res://Scenes/game.tscn

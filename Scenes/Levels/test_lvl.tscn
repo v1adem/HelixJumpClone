@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqjtqygny4g6c"]
+[gd_scene load_steps=8 format=3 uid="uid://bqjtqygny4g6c"]
 
 [ext_resource type="PackedScene" uid="uid://3wodk6aw2bty" path="res://Scenes/Platforms/platform.glb" id="1_2edwe"]
+[ext_resource type="PackedScene" uid="uid://befkcbfxtjxrj" path="res://Scenes/Platforms/platformded.glb" id="1_116f3"]
 [ext_resource type="PackedScene" uid="uid://bv8vycuctsvjt" path="res://Scenes/Platforms/platform3.glb" id="2_wjlwc"]
 [ext_resource type="PackedScene" uid="uid://bb77s4y2g71sg" path="res://Scenes/Platforms/platform2.glb" id="3_x45nj"]
 [ext_resource type="PackedScene" uid="uid://b514u3hbs4gxr" path="res://Scenes/Platforms/platformonepart.glb" id="4_7f3qq"]
@@ -15,6 +16,9 @@
 transform = Transform3D(0.7, 0, 0, 0, 100.001, 0, 0, 0, 0.7, 0, -92.1965, 0)
 mesh = SubResource("CylinderMesh_5xp8o")
 surface_material_override/0 = SubResource("StandardMaterial3D_a7co6")
+
+[node name="platformded" parent="." instance=ExtResource("1_116f3")]
+transform = Transform3D(0.71037, 0, 0.703829, 0, 1, 0, -0.703829, 0, 0.71037, -0.01, -10.499, 0)
 
 [node name="platform" parent="." instance=ExtResource("1_2edwe")]
 
