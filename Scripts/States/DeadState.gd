@@ -7,6 +7,7 @@ class_name DeadState
 func enter():
 	ball.is_dead = true;
 	game.rotation_speed = 0.0;
+	get_tree().reload_current_scene()
 
 func update(delta: float):
 	pass
