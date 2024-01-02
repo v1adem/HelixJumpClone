@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_hjnlf"]
 [ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="3_h6c2k"]
-[ext_resource type="Script" path="res://Scripts/test_lvl.gd" id="4_rh5rc"]
 [ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/ball.tscn" id="5_kncpy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
@@ -17,6 +16,20 @@ background_mode = 2
 sky = SubResource("Sky_py8jp")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="GDScript" id="GDScript_2c78r"]
+script/source = "extends Node3D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+	
+"
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_hjnlf")
@@ -33,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0713535, 0.63982, 0.83443)
 
 [node name="test_lvl" parent="." instance=ExtResource("3_h6c2k")]
 transform = Transform3D(0.345675, 0, -0.938354, 0, 1, 0, 0.938354, 0, 0.345675, 0, 0, 0)
-script = ExtResource("4_rh5rc")
+script = SubResource("GDScript_2c78r")
 
 [node name="start" type="Node2D" parent="."]
 position = Vector2(-106, -269)
