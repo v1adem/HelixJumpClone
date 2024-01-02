@@ -13,7 +13,7 @@ script = ExtResource("2_f6hnh")
 monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Коло004/Area3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705604, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.993248, 0)
 shape = SubResource("ConvexPolygonShape3D_n3yob")
 
 [connection signal="body_shape_entered" from="Коло004/Area3D" to="." method="_on_area_3d_body_shape_entered"]
