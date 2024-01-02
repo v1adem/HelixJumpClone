@@ -1,4 +1,7 @@
+Area3D
 Node
+Ball
+Area2D
 CollisionShape3D
 CharacterBody3D
 Button

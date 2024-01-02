@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd7twfrvo6e7e"]
+
+[ext_resource type="PackedScene" uid="uid://befkcbfxtjxrj" path="res://Scenes/Platforms/platformded.glb" id="1_jyrrs"]
+[ext_resource type="Script" path="res://Scenes/platformded.gd" id="2_f6hnh"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n3yob"]
+points = PackedVector3Array(-5.56707e-05, 1.87968, 0, -0.568995, 1.87968, -0.783163, -5.56707e-05, -0.120322, 0, -5.56707e-05, 1.87968, -0.968033, -0.50862, 1.87968, -0.823719, -0.568995, -0.120322, -0.783163, -5.56707e-05, -0.120322, -0.968033, -0.0726839, 1.87968, -0.96538, -0.442954, 1.87968, -0.860863, -0.50862, -0.120322, -0.823719, -0.0726839, -0.120322, -0.96538, -0.147651, 1.87968, -0.956757, -0.372721, 1.87968, -0.893459, -0.442954, -0.120322, -0.860863, -0.147651, -0.120322, -0.956757, -0.223621, 1.87968, -0.94188, -0.299146, 1.87968, -0.920655, -0.372721, -0.120322, -0.893459, -0.223621, -0.120322, -0.94188, -0.299146, -0.120322, -0.920655)
+
+[node name="platformded" instance=ExtResource("1_jyrrs")]
+script = ExtResource("2_f6hnh")
+
+[node name="Area3D" type="Area3D" parent="Коло004" index="1"]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Коло004/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705604, 0)
+shape = SubResource("ConvexPolygonShape3D_n3yob")
+
+[connection signal="body_shape_entered" from="Коло004/Area3D" to="." method="_on_area_3d_body_shape_entered"]

@@ -1,24 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqjtqygny4g6c"]
+[gd_scene load_steps=10 format=3 uid="uid://bqjtqygny4g6c"]
 
 [ext_resource type="PackedScene" uid="uid://3wodk6aw2bty" path="res://Scenes/Platforms/platform.glb" id="1_2edwe"]
-[ext_resource type="PackedScene" uid="uid://befkcbfxtjxrj" path="res://Scenes/Platforms/platformded.glb" id="1_116f3"]
+[ext_resource type="Script" path="res://Scenes/Levels/test_lvl.gd" id="1_tvbs8"]
+[ext_resource type="PackedScene" uid="uid://cd7twfrvo6e7e" path="res://Scenes/platformded.tscn" id="2_6psc6"]
 [ext_resource type="PackedScene" uid="uid://bv8vycuctsvjt" path="res://Scenes/Platforms/platform3.glb" id="2_wjlwc"]
 [ext_resource type="PackedScene" uid="uid://bb77s4y2g71sg" path="res://Scenes/Platforms/platform2.glb" id="3_x45nj"]
 [ext_resource type="PackedScene" uid="uid://b514u3hbs4gxr" path="res://Scenes/Platforms/platformonepart.glb" id="4_7f3qq"]
+[ext_resource type="PackedScene" uid="uid://gt4ldouggm8t" path="res://Scenes/Platforms/platform_finish.tscn" id="7_5yxli"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_5xp8o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7co6"]
 
 [node name="test_lvl" type="Node3D"]
+script = ExtResource("1_tvbs8")
 
 [node name="pillar" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 100.001, 0, 0, 0, 0.7, 0, -92.1965, 0)
 mesh = SubResource("CylinderMesh_5xp8o")
 surface_material_override/0 = SubResource("StandardMaterial3D_a7co6")
 
-[node name="platformded" parent="." instance=ExtResource("1_116f3")]
-transform = Transform3D(0.71037, 0, 0.703829, 0, 1, 0, -0.703829, 0, 0.71037, -0.01, -10.499, 0)
+[node name="platformded2" parent="." instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.699589, 0, 0.714546, 0, 1, 0, -0.714546, 0, 0.699589, 0, -10.4709, -0.0139842)
 
 [node name="platform" parent="." instance=ExtResource("1_2edwe")]
 
@@ -115,8 +118,12 @@ transform = Transform3D(0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, 0.979575, 
 [node name="platform32" parent="." instance=ExtResource("1_2edwe")]
 transform = Transform3D(-0.961262, 0, -0.275637, 0, 1, 0, 0.275637, 0, -0.961262, 0, -22.5, 0)
 
-[node name="platform33" parent="." instance=ExtResource("3_x45nj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -47, 0)
+[node name="platform_finish" parent="." instance=ExtResource("7_5yxli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -46.9987, 0)
 
-[node name="platform34" parent="." instance=ExtResource("3_x45nj")]
-transform = Transform3D(0.151261, 0, -0.988494, 0, 1, 0, 0.988494, 0, 0.151261, 0, -47, 0)
+[node name="platform_finish2" parent="." instance=ExtResource("7_5yxli")]
+transform = Transform3D(0.253842, 0, 0.967246, 0, 1, 0, -0.967246, 0, 0.253842, 0, -46.9987, 0)
+
+[connection signal="dead" from="platformded2" to="." method="_on_platformded_2_dead"]
+[connection signal="win" from="platform_finish" to="." method="_on_platform_finish_win"]
+[connection signal="win" from="platform_finish2" to="." method="_on_platform_finish_2_win"]

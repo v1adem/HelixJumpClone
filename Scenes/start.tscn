@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://8brugkakx11m"]
+[gd_scene load_steps=8 format=3 uid="uid://dx7nvvb6h3bmr"]
 
-[ext_resource type="Script" path="res://Scripts/game.gd" id="1_hjnlf"]
+[ext_resource type="Script" path="res://Scripts/Classes/game.gd" id="1_1w68g"]
 [ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="3_h6c2k"]
-[ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/ball.tscn" id="5_kncpy"]
+[ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/player.tscn" id="5_kncpy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -32,7 +32,7 @@ func _process(delta):
 "
 
 [node name="Game" type="Node3D"]
-script = ExtResource("1_hjnlf")
+script = ExtResource("1_1w68g")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_12bx2")

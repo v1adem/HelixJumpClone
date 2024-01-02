@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://o6ei44fm53dl"]
+[gd_scene load_steps=11 format=3 uid="uid://o6ei44fm53dl"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_aaec2"]
 [ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="2_pi7nu"]
-[ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/ball.tscn" id="3_ddg10"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="3_4605x"]
+[ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/player.tscn" id="3_ddg10"]
 [ext_resource type="Script" path="res://Scripts/States/StateMachine.gd" id="4_hdqh3"]
+[ext_resource type="Script" path="res://Scripts/States/DeadState.gd" id="5_lbwmr"]
+[ext_resource type="Script" path="res://Scripts/States/PlayState.gd" id="7_oull5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
 sky_top_color = Color(0.556863, 0.407843, 0.345098, 1)
@@ -30,11 +33,26 @@ environment = SubResource("Environment_12bx2")
 transform = Transform3D(0.988236, 0.143641, -0.0525052, -0.114352, 0.921975, 0.369981, 0.101553, -0.359625, 0.927554, 0, 1.72514, 0)
 shadow_enabled = true
 
-[node name="ball" parent="." instance=ExtResource("3_ddg10")]
+[node name="player" parent="." instance=ExtResource("3_ddg10")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.247927, 0.663154)
+script = ExtResource("3_4605x")
 
 [node name="test_lvl" parent="." instance=ExtResource("2_pi7nu")]
 transform = Transform3D(0.345675, 0, -0.938354, 0, 1, 0, 0.938354, 0, 0.345675, 0, 0, 0)
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_hdqh3")
+initial_state = NodePath("Play")
+
+[node name="Dead" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball")]
+script = ExtResource("5_lbwmr")
+game = NodePath("../..")
+ball = NodePath("../../player")
+
+[node name="Play" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball")]
+script = ExtResource("7_oull5")
+game = NodePath("../..")
+ball = NodePath("../../player")
+
+[connection signal="dead" from="test_lvl" to="StateMachine/Play" method="_on_test_lvl_dead"]
+[connection signal="win" from="test_lvl" to="StateMachine/Play" method="_on_test_lvl_win"]
