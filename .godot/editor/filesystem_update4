@@ -1,9 +1,0 @@
-res://Scenes/start.tscn
-res://Scripts/Classes/ball.gd
-res://Scenes/Levels/test_lvl.gd
-res://Scenes/Levels/test_lvl.tscn
-res://Scenes/game.tscn
-res://Scenes/platformded.tscn
-res://Scenes/player.tscn
-res://Scenes/Platforms/platform_finish.tscn
-res://Scripts/States/DeadState.gd
