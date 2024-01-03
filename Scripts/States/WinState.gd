@@ -1,9 +1,14 @@
 extends State
+class_name WinState
 
+@export var game: Game
+@export var ball: Ball
 @export var menu_state: State
 @export var win: Control
 
 func enter():
+	ball.is_dead = true;
+	game.rotation_speed = 0.0;
 	win.visible = true
 
 func exit():

@@ -57,8 +57,10 @@ script = ExtResource("7_oull5")
 game = NodePath("../..")
 ball = NodePath("../../player")
 
-[node name="Win" type="Node" parent="StateMachine" node_paths=PackedStringArray("menu_state", "win")]
+[node name="Win" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball", "menu_state", "win")]
 script = ExtResource("8_kn7ba")
+game = NodePath("../..")
+ball = NodePath("../../player")
 menu_state = NodePath("../Menu")
 win = NodePath("../../WinState")
 

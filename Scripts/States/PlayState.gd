@@ -12,4 +12,4 @@ func _on_test_lvl_dead():
 	transitioned.emit(self, "dead")
 
 func _on_test_lvl_win():
-	transitioned.emit(self, "dead")
+	transitioned.emit(self, "win")

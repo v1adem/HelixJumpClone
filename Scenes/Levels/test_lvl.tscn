@@ -21,10 +21,79 @@ mesh = SubResource("CylinderMesh_5xp8o")
 surface_material_override/0 = SubResource("StandardMaterial3D_a7co6")
 
 [node name="platformded2" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
-transform = Transform3D(0.699589, 0, 0.714546, 0, 1, 0, -0.714546, 0, 0.699589, 0, -10.4709, -0.0139842)
+transform = Transform3D(0.899429, 0, 0.437069, 0, 1, 0, -0.437069, 0, 0.899429, 0, -16.4785, -0.0139842)
+
+[node name="platformded7" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.635109, 0, 0.772423, 0, 1, 0, -0.772423, 0, 0.635109, 0, -11.9883, -0.0139842)
+
+[node name="platformded8" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.0751182, 0, -0.997175, 0, 1, 0, 0.997175, 0, -0.0751182, 0, -11.9883, -0.0139842)
+
+[node name="platformded9" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.202189, 0, 0.979347, 0, 1, 0, -0.979347, 0, -0.202189, 0, -7.47996, -0.0139842)
 
 [node name="platformded3" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
-transform = Transform3D(0.904023, 0, -0.427485, 0, 1, 0, 0.427485, 0, 0.904023, 0, -10.4709, -0.0139842)
+transform = Transform3D(0.341824, 0, 0.939764, 0, 1, 0, -0.939764, 0, 0.341824, 0, -19.4543, -0.0139842)
+
+[node name="platformded10" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.458401, 0, -0.888746, 0, 1, 0, 0.888746, 0, 0.458401, 0, -26.9873, -0.0139842)
+
+[node name="platformded11" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.918971, 0, -0.394326, 0, 1, 0, 0.394326, 0, -0.918971, 0, -29.9992, -0.0139842)
+
+[node name="platformded12" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.918971, 0, -0.394326, 0, 1, 0, 0.394326, 0, -0.918971, 0, -34.9645, -0.0139842)
+
+[node name="platformded13" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.58955, 0, -0.807732, 0, 1, 0, 0.807732, 0, -0.58955, 0, -36.4982, -0.0139842)
+
+[node name="platformded14" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.0449609, 0, 0.998989, 0, 1, 0, -0.998989, 0, -0.0449609, 0, -36.5062, -0.0139842)
+
+[node name="platformded15" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.546045, 0, 0.837757, 0, 1, 0, -0.837757, 0, 0.546045, 0, -36.5062, -0.0139842)
+
+[node name="platformded16" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.899855, 0, 0.43619, 0, 1, 0, -0.43619, 0, -0.899855, 0, -37.9604, -0.0139842)
+
+[node name="platformded17" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.738596, 0, 0.674149, 0, 1, 0, -0.674149, 0, -0.738596, 0, -39.4975, -0.0139842)
+
+[node name="platformded18" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.417613, 0, 0.908626, 0, 1, 0, -0.908626, 0, -0.417613, 0, -42.4947, -0.0139842)
+
+[node name="platformded20" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.75776, 0, -0.652535, 0, 1, 0, 0.652535, 0, -0.75776, 0, -42.4947, -0.0139842)
+
+[node name="platformded21" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.263824, 0, -0.964572, 0, 1, 0, 0.964572, 0, -0.263824, 0, -42.4947, -0.0139842)
+
+[node name="platformded22" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.356868, 0, -0.934156, 0, 1, 0, 0.934156, 0, 0.356868, 0, -42.4947, -0.0139842)
+
+[node name="platformded23" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.836009, 0, -0.548718, 0, 1, 0, 0.548718, 0, 0.836009, 0, -42.4947, -0.0139842)
+
+[node name="platformded24" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.998879, 0, 0.0473496, 0, 1, 0, -0.0473496, 0, 0.998879, 0, -42.4947, -0.0139842)
+
+[node name="platformded25" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.784193, 0, 0.620518, 0, 1, 0, -0.620518, 0, 0.784193, 0, -42.4947, -0.0139842)
+
+[node name="platformded26" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.380216, 0, 0.924898, 0, 1, 0, -0.924898, 0, 0.380216, 0, -42.4947, -0.0139842)
+
+[node name="platformded27" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.073013, 0, 0.997332, 0, 1, 0, -0.997332, 0, 0.073013, 0, -42.4947, -0.0139842)
+
+[node name="platformded5" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.997982, 0, 0.0635054, 0, 1, 0, -0.0635054, 0, -0.997982, 0, -19.4543, -0.0139842)
+
+[node name="platformded6" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.963402, 0, -0.268063, 0, 1, 0, 0.268063, 0, 0.963402, 0, -19.4543, -0.0139842)
+
+[node name="platformded4" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(-0.0450135, 0, 0.998987, 0, 1, 0, -0.998987, 0, -0.0450135, 0, -8.97754, -0.0139842)
 
 [node name="platform" parent="." instance=ExtResource("1_2edwe")]
 
@@ -116,7 +185,7 @@ transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0, -39.5
 transform = Transform3D(0.335452, 0, -0.942057, 0, 1, 0, 0.942057, 0, 0.335452, 0, -33, 0)
 
 [node name="platform31" parent="." instance=ExtResource("3_x45nj")]
-transform = Transform3D(0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, 0.979575, 0, -41, 0)
+transform = Transform3D(0.966689, 0, -0.255952, 0, 1, 0, 0.255952, 0, 0.966689, 0, -41, 0)
 
 [node name="platform32" parent="." instance=ExtResource("1_2edwe")]
 transform = Transform3D(-0.961262, 0, -0.275637, 0, 1, 0, 0.275637, 0, -0.961262, 0, -22.5, 0)
