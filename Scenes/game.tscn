@@ -69,7 +69,6 @@ ball = NodePath("../../player")
 dead = NodePath("../../DeadState")
 
 [node name="StartGame" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,10 +85,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -546.0
-offset_top = -81.0
-offset_right = 485.0
-offset_bottom = 852.0
+offset_left = -526.0
+offset_top = -82.0
+offset_right = 505.0
+offset_bottom = 851.0
 grow_horizontal = 2
 
 [node name="Label" type="Label" parent="StartGame/Panel"]
@@ -97,10 +96,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -219.5
-offset_top = 73.0
-offset_right = 259.5
-offset_bottom = 168.0
+offset_left = -239.5
+offset_top = 60.0
+offset_right = 239.5
+offset_bottom = 155.0
 grow_horizontal = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -114,10 +113,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -26.5
-offset_top = 604.0
-offset_right = 71.5
-offset_bottom = 681.0
+offset_left = -49.0
+offset_top = 600.0
+offset_right = 49.0
+offset_bottom = 677.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Exit"
@@ -127,10 +126,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -40.5
-offset_top = 441.0
-offset_right = 85.5
-offset_bottom = 518.0
+offset_left = -63.0
+offset_top = 450.0
+offset_right = 63.0
+offset_bottom = 527.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Start"
@@ -144,29 +143,59 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="tryAgainButton" type="Button" parent="DeadState"]
+[node name="Panel" type="Panel" parent="DeadState"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 145.0
-offset_top = 547.0
-offset_right = -175.0
-offset_bottom = -1157.0
-theme_override_font_sizes/font_size = 50
-text = "Try again!"
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -518.0
+offset_top = -13.0
+offset_right = 513.0
+offset_bottom = 920.0
+grow_horizontal = 2
 
-[node name="exitButton" type="Button" parent="DeadState"]
+[node name="Label" type="Label" parent="DeadState/Panel"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 149.0
-offset_top = 839.0
-offset_right = -171.0
-offset_bottom = -865.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -239.5
+offset_top = 60.0
+offset_right = 239.5
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "HelixJumpClone
+Unfortunately, you lose :("
+horizontal_alignment = 1
+
+[node name="exitButton" type="Button" parent="DeadState/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 600.0
+offset_right = 49.0
+offset_bottom = 677.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Exit"
+
+[node name="tryAgainButton" type="Button" parent="DeadState/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_top = 450.0
+offset_right = 122.0
+offset_bottom = 527.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Try again!"
 
 [node name="WinState" type="Control" parent="."]
 visible = false
@@ -177,35 +206,65 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="tryAgainButton" type="Button" parent="WinState"]
+[node name="Panel" type="Panel" parent="WinState"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 145.0
-offset_top = 547.0
-offset_right = -175.0
-offset_bottom = -1157.0
-theme_override_font_sizes/font_size = 50
-text = "Try again!"
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -518.0
+offset_top = -13.0
+offset_right = 513.0
+offset_bottom = 920.0
+grow_horizontal = 2
 
-[node name="exitButton" type="Button" parent="WinState"]
+[node name="Label" type="Label" parent="WinState/Panel"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 149.0
-offset_top = 839.0
-offset_right = -171.0
-offset_bottom = -865.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -239.5
+offset_top = 60.0
+offset_right = 239.5
+offset_bottom = 155.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "HelixJumpClone
+Wow! You won!!!"
+horizontal_alignment = 1
+
+[node name="exitButton" type="Button" parent="WinState/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 600.0
+offset_right = 49.0
+offset_bottom = 677.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Exit"
+
+[node name="tryAgainButton" type="Button" parent="WinState/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -122.0
+offset_top = 450.0
+offset_right = 122.0
+offset_bottom = 527.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Try again!"
 
 [connection signal="dead" from="test_lvl" to="StateMachine/Play" method="_on_test_lvl_dead"]
 [connection signal="win" from="test_lvl" to="StateMachine/Play" method="_on_test_lvl_win"]
 [connection signal="pressed" from="StartGame/Panel/exitButton" to="StateMachine/Menu" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="StartGame/Panel/startButton" to="StateMachine/Menu" method="_on_start_button_pressed"]
-[connection signal="pressed" from="DeadState/tryAgainButton" to="StateMachine/Dead" method="_on_try_again_button_pressed"]
-[connection signal="pressed" from="DeadState/exitButton" to="StateMachine/Dead" method="_on_exit_button_pressed"]
-[connection signal="pressed" from="WinState/tryAgainButton" to="StateMachine/Win" method="_on_try_again_button_pressed"]
-[connection signal="pressed" from="WinState/exitButton" to="StateMachine/Win" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="DeadState/Panel/exitButton" to="StateMachine/Menu" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="DeadState/Panel/tryAgainButton" to="StateMachine/Dead" method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="WinState/Panel/exitButton" to="StateMachine/Win" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="WinState/Panel/tryAgainButton" to="StateMachine/Win" method="_on_try_again_button_pressed"]
