@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://o6ei44fm53dl"]
+[gd_scene load_steps=13 format=3 uid="uid://o6ei44fm53dl"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_aaec2"]
 [ext_resource type="PackedScene" uid="uid://bqjtqygny4g6c" path="res://Scenes/Levels/test_lvl.tscn" id="2_pi7nu"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://by5qqqripjrah" path="res://Scenes/player.tscn" id="3_ddg10"]
 [ext_resource type="Script" path="res://Scripts/States/StateMachine.gd" id="4_hdqh3"]
 [ext_resource type="Script" path="res://Scripts/States/DeadState.gd" id="5_lbwmr"]
+[ext_resource type="Script" path="res://Scripts/States/MenuState.gd" id="6_ovhv3"]
 [ext_resource type="Script" path="res://Scripts/States/PlayState.gd" id="7_oull5"]
+[ext_resource type="Script" path="res://Scripts/States/WinState.gd" id="8_kn7ba"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_orbx2"]
 sky_top_color = Color(0.556863, 0.407843, 0.345098, 1)
@@ -42,19 +44,32 @@ transform = Transform3D(0.345675, 0, -0.938354, 0, 1, 0, 0.938354, 0, 0.345675, 
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_hdqh3")
-initial_state = NodePath("Play")
+initial_state = NodePath("Menu")
 
-[node name="Dead" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball")]
-script = ExtResource("5_lbwmr")
+[node name="Menu" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball", "menu")]
+script = ExtResource("6_ovhv3")
 game = NodePath("../..")
 ball = NodePath("../../player")
+menu = NodePath("../../StartGame")
 
 [node name="Play" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball")]
 script = ExtResource("7_oull5")
 game = NodePath("../..")
 ball = NodePath("../../player")
 
+[node name="Win" type="Node" parent="StateMachine" node_paths=PackedStringArray("menu_state", "win")]
+script = ExtResource("8_kn7ba")
+menu_state = NodePath("../Menu")
+win = NodePath("../../WinState")
+
+[node name="Dead" type="Node" parent="StateMachine" node_paths=PackedStringArray("game", "ball", "dead")]
+script = ExtResource("5_lbwmr")
+game = NodePath("../..")
+ball = NodePath("../../player")
+dead = NodePath("../../DeadState")
+
 [node name="StartGame" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -188,3 +203,9 @@ text = "Exit"
 
 [connection signal="dead" from="test_lvl" to="StateMachine/Play" method="_on_test_lvl_dead"]
 [connection signal="win" from="test_lvl" to="StateMachine/Play" method="_on_test_lvl_win"]
+[connection signal="pressed" from="StartGame/Panel/exitButton" to="StateMachine/Menu" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="StartGame/Panel/startButton" to="StateMachine/Menu" method="_on_start_button_pressed"]
+[connection signal="pressed" from="DeadState/tryAgainButton" to="StateMachine/Dead" method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="DeadState/exitButton" to="StateMachine/Dead" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="WinState/tryAgainButton" to="StateMachine/Win" method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="WinState/exitButton" to="StateMachine/Win" method="_on_exit_button_pressed"]
