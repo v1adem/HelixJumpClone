@@ -20,8 +20,11 @@ transform = Transform3D(0.7, 0, 0, 0, 100.001, 0, 0, 0, 0.7, 0, -92.1965, 0)
 mesh = SubResource("CylinderMesh_5xp8o")
 surface_material_override/0 = SubResource("StandardMaterial3D_a7co6")
 
-[node name="platformded2" parent="." instance=ExtResource("2_6psc6")]
+[node name="platformded2" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
 transform = Transform3D(0.699589, 0, 0.714546, 0, 1, 0, -0.714546, 0, 0.699589, 0, -10.4709, -0.0139842)
+
+[node name="platformded3" parent="." groups=["dead_plat"] instance=ExtResource("2_6psc6")]
+transform = Transform3D(0.904023, 0, -0.427485, 0, 1, 0, 0.427485, 0, 0.904023, 0, -10.4709, -0.0139842)
 
 [node name="platform" parent="." instance=ExtResource("1_2edwe")]
 
@@ -118,12 +121,11 @@ transform = Transform3D(0.979575, 0, -0.201078, 0, 1, 0, 0.201078, 0, 0.979575, 
 [node name="platform32" parent="." instance=ExtResource("1_2edwe")]
 transform = Transform3D(-0.961262, 0, -0.275637, 0, 1, 0, 0.275637, 0, -0.961262, 0, -22.5, 0)
 
-[node name="platform_finish" parent="." instance=ExtResource("7_5yxli")]
+[node name="platform_finish" parent="." groups=["win_plat"] instance=ExtResource("7_5yxli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -46.9987, 0)
 
-[node name="platform_finish2" parent="." instance=ExtResource("7_5yxli")]
+[node name="platform_finish2" parent="." groups=["win_plat"] instance=ExtResource("7_5yxli")]
 transform = Transform3D(0.253842, 0, 0.967246, 0, 1, 0, -0.967246, 0, 0.253842, 0, -46.9987, 0)
 
-[connection signal="dead" from="platformded2" to="." method="_on_platformded_2_dead"]
 [connection signal="win" from="platform_finish" to="." method="_on_platform_finish_win"]
 [connection signal="win" from="platform_finish2" to="." method="_on_platform_finish_2_win"]
